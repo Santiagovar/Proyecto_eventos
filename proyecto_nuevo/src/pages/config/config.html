@@ -1,0 +1,59 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>config</ion-title>
+  <ion-buttons start>
+      <button ion-button (click)="viewCtrl.dismiss()">
+        Volver atras
+      </button>
+</ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list no-border>
+
+    <ion-list-header>
+      historial
+    </ion-list-header>
+ <ion-item (click)="perfil()">
+      <ion-icon name='contact' item-start></ion-icon>
+      Perfil
+    </ion-item>
+      <ion-item>
+           <ion-icon name='speedometer' item-start></ion-icon>
+           Puntos
+           <ion-note item-end>
+         500
+           </ion-note>
+         </ion-item>
+    <ion-item (click)="guardados()">
+      <ion-icon name='send' item-start></ion-icon>
+      Eventos a los que asistiré
+      <ion-note item-end>
+    {{_gs.items.length}}
+      </ion-note>
+    </ion-item>
+       <ion-item (click)="compras()">
+      <ion-icon name='ribbon' item-start></ion-icon>
+  Compras
+      <ion-note item-end>
+Premios
+      </ion-note>
+    </ion-item>
+
+       <ion-item *ngIf="_us.activo()" (click)="cerrar_sesion()">
+      <ion-icon name='ribbon' item-start></ion-icon>
+  Cerrar sesion
+</ion-item>
+
+
+
+
+</ion-list>
+
+</ion-content>
