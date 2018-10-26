@@ -1,7 +1,0 @@
-{
-  "name": "proyecto_nuevo",
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "ionic-angular"
-}
